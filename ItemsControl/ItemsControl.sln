@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ItemsControl1", "ItemsControl1\ItemsControl1.csproj", "{B40894C8-B7BF-4175-8D7C-3B0EE6D9422A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ItemsControl2", "ItemsControl2\ItemsControl2.csproj", "{1BFABD0E-0272-4F26-B5D2-150CB2F53E80}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ItemsControl3", "ItemsControl3\ItemsControl3.csproj", "{E5737A9C-52C8-4237-9139-D60863E91E59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiColumnList", "MultiColumnList\MultiColumnList.csproj", "{EE26D0B8-D12E-43CF-A636-9EF8BFE3CEA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiColumnList-Test", "MultiColumnList-Test\MultiColumnList-Test.csproj", "{691C3489-7843-4984-832F-73BFFFB63988}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListBoxTemplate", "ListBoxTemplate\ListBoxTemplate.csproj", "{1BBA6F40-89F8-48EC-B634-2179AF4D28B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B40894C8-B7BF-4175-8D7C-3B0EE6D9422A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B40894C8-B7BF-4175-8D7C-3B0EE6D9422A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B40894C8-B7BF-4175-8D7C-3B0EE6D9422A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B40894C8-B7BF-4175-8D7C-3B0EE6D9422A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BFABD0E-0272-4F26-B5D2-150CB2F53E80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BFABD0E-0272-4F26-B5D2-150CB2F53E80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BFABD0E-0272-4F26-B5D2-150CB2F53E80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BFABD0E-0272-4F26-B5D2-150CB2F53E80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5737A9C-52C8-4237-9139-D60863E91E59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5737A9C-52C8-4237-9139-D60863E91E59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5737A9C-52C8-4237-9139-D60863E91E59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5737A9C-52C8-4237-9139-D60863E91E59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE26D0B8-D12E-43CF-A636-9EF8BFE3CEA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE26D0B8-D12E-43CF-A636-9EF8BFE3CEA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE26D0B8-D12E-43CF-A636-9EF8BFE3CEA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE26D0B8-D12E-43CF-A636-9EF8BFE3CEA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{691C3489-7843-4984-832F-73BFFFB63988}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{691C3489-7843-4984-832F-73BFFFB63988}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{691C3489-7843-4984-832F-73BFFFB63988}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{691C3489-7843-4984-832F-73BFFFB63988}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BBA6F40-89F8-48EC-B634-2179AF4D28B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BBA6F40-89F8-48EC-B634-2179AF4D28B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BBA6F40-89F8-48EC-B634-2179AF4D28B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BBA6F40-89F8-48EC-B634-2179AF4D28B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {075440BB-A9AF-454E-BE8E-15E7F37CC9AC}
+	EndGlobalSection
+EndGlobal
