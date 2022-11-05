@@ -1,0 +1,51 @@
+﻿<Window
+    x:Class="MVVM_Toolkit.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MVVM_Toolkit"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:MVVM_Toolkit.ViewModels"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <Window.DataContext>
+        <vm:ViewModel />
+    </Window.DataContext>
+    <Grid>
+
+        <TextBox
+            Width="254"
+            Height="26"
+            Margin="71,59,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="{Binding FirstName, Mode=TwoWay}"
+            TextWrapping="Wrap" />
+        <TextBox
+            Width="254"
+            Height="26"
+            Margin="71,109,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="{Binding LastName, Mode=TwoWay}"
+            TextWrapping="Wrap" />
+        <Label
+            Width="254"
+            Height="29"
+            Margin="71,169,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="{Binding FullName}" />
+        <Button
+            Width="254"
+            Height="29"
+            Margin="71,217,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Command="{Binding TapCommand}"
+            Content="Button"
+            IsEnabled="{Binding IsNotBusy}" />
+    </Grid>
+</Window>
