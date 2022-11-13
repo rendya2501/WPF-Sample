@@ -1,0 +1,12 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Wpf_Style">
+    <!--  2つ目のチェックボックスのスタイル  -->
+    <Style x:Key="MyCheckboxStyle2" TargetType="CheckBox">
+        <Setter Property="Background" Value="Red" />
+    </Style>
+    <Style TargetType="Label">
+        <Setter Property="Foreground" Value="HotPink" />
+    </Style>
+</ResourceDictionary>

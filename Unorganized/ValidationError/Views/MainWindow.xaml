@@ -1,0 +1,78 @@
+﻿<Window
+    x:Class="ValidationError.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:ValidationError.ViewModels"
+    xmlns:vm1="clr-namespace:ValidationError.ValidationRules"
+    Title="MainWindow"
+    SizeToContent="WidthAndHeight"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <vm:ViewModel x:Key="testModel" />
+        <ControlTemplate x:Key="validationTemplate">
+            <Grid>
+                <Border
+                    Width="15"
+                    Height="15"
+                    Margin="0,0,4,0"
+                    HorizontalAlignment="Right"
+                    Background="MediumVioletRed"
+                    CornerRadius="5">
+                    <Border.ToolTip>
+                        <Binding ElementName="adornedelem" Path="AdornedElement.(Validation.Errors).CurrentItem.ErrorContent" />
+                    </Border.ToolTip>
+                    <TextBlock
+                        VerticalAlignment="Center"
+                        FontWeight="Bold"
+                        Foreground="White"
+                        TextAlignment="Center">
+                        !
+                    </TextBlock>
+                </Border>
+                <AdornedElementPlaceholder x:Name="adornedelem">
+                    <Border
+                        Width="{Binding ElementName=adornedelem, Path=AdornedElement.ActualWidth}"
+                        BorderBrush="MediumVioletRed"
+                        BorderThickness="2" />
+                </AdornedElementPlaceholder>
+            </Grid>
+        </ControlTemplate>
+    </Window.Resources>
+    <Grid Margin="10" DataContext="{StaticResource testModel}">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="2*" MinWidth="100" />
+        </Grid.ColumnDefinitions>
+        <Label
+            Grid.Row="0"
+            Grid.Column="0"
+            Content="数値だけ" />
+        <TextBox
+            Grid.Row="0"
+            Grid.Column="1"
+            Validation.ErrorTemplate="{StaticResource validationTemplate}">
+            <TextBox.Text>
+                <Binding Path="Number" ValidatesOnDataErrors="true">
+                    <Binding.ValidationRules>
+                        <vm1:NumericValidation />
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <Label
+            Grid.Row="1"
+            Grid.Column="0"
+            Content="最小4文字以上" />
+        <TextBox
+            Grid.Row="1"
+            Grid.Column="1"
+            Text="{Binding Name, ValidatesOnDataErrors=true}"
+            Validation.ErrorTemplate="{StaticResource validationTemplate}" />
+    </Grid>
+</Window>

@@ -1,0 +1,56 @@
+﻿<Window
+    x:Class="Wpf_Style.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Wpf_Style"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="300"
+    Height="150"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Dictionary1.xaml" />
+
+                <!--  リソースディクショナリーを定義した場合、その場で書いたリソースもResourceDictionary内に書く必要があるらしい  -->
+                <ResourceDictionary>
+                    <!--  継承元のスタイル  -->
+                    <Style x:Key="DefaultTextStyle" TargetType="{x:Type TextBlock}">
+                        <Setter Property="FontFamily" Value="Meiryo UI" />
+                        <Setter Property="Foreground" Value="Yellow" />
+                        <Setter Property="FontSize" Value="12" />
+                    </Style>
+
+                    <!--  継承先のスタイル  -->
+                    <Style
+                        x:Key="TitleTextStyle"
+                        BasedOn="{StaticResource DefaultTextStyle}"
+                        TargetType="{x:Type TextBlock}">
+                        <Setter Property="FontSize" Value="24" />
+                        <Setter Property="Foreground" Value="Red" />
+                    </Style>
+
+                    <!--  継承先のスタイルをさらに継承したスタイル  -->
+                    <Style
+                        x:Key="ThirdTextStyle"
+                        BasedOn="{StaticResource TitleTextStyle}"
+                        TargetType="{x:Type TextBlock}">
+                        <Setter Property="FontStyle" Value="Oblique" />
+                        <Setter Property="FontSize" Value="12" />
+                    </Style>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <StackPanel>
+        <TextBlock Style="{StaticResource TitleTextStyle}" Text="タイトル" />
+        <TextBlock Style="{StaticResource DefaultTextStyle}" Text="デフォルトのテキスト" />
+        <TextBlock Style="{StaticResource ThirdTextStyle}" Text="第3のテキスト" />
+        <CheckBox IsChecked="True" Style="{StaticResource MyCheckboxStyle2}" />
+        <Label Content="aaaa" />
+        <Label Content="aaaa" Foreground="Yellow" />
+    </StackPanel>
+</Window>

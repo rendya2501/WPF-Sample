@@ -1,0 +1,42 @@
+﻿<Window
+    x:Class="EnumDataTrigger.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:localenum="clr-namespace:EnumDataTrigger.Enum"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:EnumDataTrigger.ViewModles"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <Window.DataContext>
+        <vm:ViewModel />
+    </Window.DataContext>
+    <Grid>
+        <Button
+            Width="232"
+            Height="59"
+            Margin="67,76,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Command="{Binding ButtonCommand}"
+            Content="Button">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding State}" Value="{x:Static localenum:State.Normal}">
+                            <Setter Property="Background" Value="Blue" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding State}" Value="Warning">
+                            <Setter Property="Background" Value="Yellow" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding State}" Value="Error">
+                            <Setter Property="Background" Value="Red" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </Grid>
+</Window>
